@@ -297,18 +297,22 @@ li, a, button {
 }
 
 /*Estilização Titulo */
-.container-home {
-  display: flex;
+
+.box-home{
+ display: flex;
  width: 100%;
   justify-content: center;
- height: 820px;
-background-image: url(../img/imgem\ destaque.png);
- background-size: cover;
+ height: 770px;
+ background-size: contain;
  background-repeat: no-repeat;
   margin-top: -10px !important;
   margin-bottom:-110px;
+background-color: #00a606;
+background-image: url(/walksdrone-main/src/img/imgem\ destaque.png);
+
 
 }
+
 
 .titulo-premium{
   margin-bottom: -110px;
@@ -583,16 +587,26 @@ justify-content: center;
     background-color: rgba(0, 0, 0, 0.049);
     }
 
-
-.container-home{
-  width: 100% !important;
-  background-image: url(/walksdrone-main/src/img/imgem\ destaque.png) !important;
-  background-size: contain;
+  
+.box-home{
+ display: flex;
+ width: 100%;
+ justify-items: center;
   justify-content: center;
+ height: 230px;
+ background-size: cover;
  background-repeat: no-repeat;
-  margin-top: -100px !important;
-  margin-bottom: -790px;
+  margin-top: -110px !important;
+  margin-bottom:-200px;
+background-color: #00a606 !important;
+
+
+
 }
+
+ 
+
+
 
 
 
