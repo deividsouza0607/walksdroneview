@@ -1,0 +1,878 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Wallpoet&display=swap');
+
+* {
+  height:none;
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+  font-family: "Ubuntu Sans Mono", monospace;
+  font-optical-sizing: auto;
+  font-style: normal;
+
+
+}
+.container-download{
+  background-color:#6A1B9A;;
+  margin-top: 0px!important;
+  margin-bottom:2px!important;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+    
+   
+}
+
+.btn-download{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+
+    padding:15px 30px;
+
+    background:#6A1B9A;
+    color:#fff;
+    text-decoration:none;
+    font-size:16px;
+    font-weight:600;
+
+    border-radius:8px;
+    transition:.3s;
+    box-shadow:0 6px 15px rgba(106,27,154,.3);
+}
+
+.btn-download:hover{
+    
+    transform:translateY(-3px);
+    box-shadow:0 10px 20px rgba(255, 255, 255, 0.4);
+}
+
+.btn-download:active{
+    transform:scale(.98);
+}
+
+
+
+/* Container principal */
+.video-container{
+  margin-top: 110px;
+  margin-bottom: -18px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+    padding:30px 20px;
+    box-sizing:border-box;
+    background-color: #0a0a0aa2;
+    
+}
+
+/* Caixa do vídeo */
+.video-box{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    width:100%;
+    max-width:1200px;
+
+    aspect-ratio:16/9;
+
+    background:#000;
+    border-radius:15px;
+    overflow:hidden;
+}
+
+/* Vídeo */
+.video-box video{
+
+    width:100%;
+    height:100%;
+    object-fit:contain; /* Mantém o vídeo inteiro sem cortar */
+    display:block;
+}
+
+
+
+
+
+/* Botão oculto no desktop */
+#btnClimaMobile{
+    display:none;
+}
+
+
+body {
+  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #9c9c9c;
+  background-size: cover;
+}
+
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #ffffff; /* Cor do WhatsApp */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+  z-index: 1000; /* Garante que o botão fique acima de outros elementos */
+  font-size: 30px; /* Tamanho do ícone */
+  color: #fff; /* Cor do ícone */
+}
+
+.whatsapp-button img {
+  width: 80px;
+  margin-top: 6px;
+  height: 80px;
+}
+
+.whatsapp-button:hover {
+  width: 61px;
+  height: 61px;
+  background-color: #0caa09e0;
+}
+
+.retornar-button {
+  position: fixed;
+  bottom: 20px;
+  right: 1270px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #ffffff; /* Cor do WhatsApp */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+  z-index: 1000; /* Garante que o botão fique acima de outros elementos */
+  font-size: 30px; /* Tamanho do ícone */
+  color: #fff; /* Cor do ícone */
+}
+
+.retornar-button img {
+  width: 71px;
+}
+
+
+
+
+.retornar-button:hover {
+  width: 61px;
+  height: 61px;
+  background-color: #e100ff6e;
+}
+
+
+
+
+/* Estilização Container Rolagem Patrocinadores */
+
+ 
+.container-barra{
+    margin-top: 0px !important;
+    margin-bottom: 5px;
+    height: 80px !important;
+ 
+}
+
+.container-patrocinadores{
+    display: flex !important;
+    flex-direction: row;
+    flex-wrap: nowrap;      /* Mantém todos em uma única linha */
+    justify-content: center; /* Centraliza os ícones */
+    align-items: center;
+    gap: 20px;               /* Espaçamento de 2px entre os ícones */
+
+    width: 100%;
+    height: 80px !important;
+    margin-top: 0px !important;
+    background-color: #0000006c !important;
+
+    overflow-x: auto;       /* Evita quebra caso não caibam */
+}
+
+.container-patrocinadores img:hover{
+    transform: scale(1.15); /* aumenta apenas o ícone selecionado */
+    box-shadow: 2px 8px 10px rgba(255, 255, 255, 0.32);
+    z-index: 10;
+    border-radius: 8px;
+}
+
+header{
+
+ 
+  background-color: #030303;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+}
+.logo{
+  width: 58px;
+  height: 58px;
+}
+/*Estilização Menu */
+
+.container-menu {
+  
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  gap: 10px;
+  height: 120px;
+  margin-top:  80px !important ;
+  margin-bottom: -20px;
+  
+}
+
+nav {
+  position: relative;
+  width: 523px;
+  height: 50px;
+  background: #00ff00;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav a {
+  position: relative;
+  display: inline-block;
+  font-size: 19px;
+  font-weight: 500;
+  color: #000000;
+  text-decoration: none;
+  padding: 0 23px;
+  z-index: 1;
+}
+
+nav span {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 523px;
+  height: 100%;
+  background: #53b80aef;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+nav a:nth-child(1):hover ~ span {
+  left: 74px;
+  width: 48px;
+}
+
+nav a:nth-child(2):hover ~ span {
+  left: 157px;
+  width: 177px;
+ 
+}
+
+nav a:nth-child(3):hover ~ span {
+  left: 364px;
+  width: 89px;
+}
+
+
+
+li, a, button {
+
+  font-weight: 500;
+  font-size: 16px;
+  color: #edf0f1;
+  text-decoration: none;
+}
+
+/*Estilização Titulo */
+.container-home {
+  display: flex;
+ width: 100%;
+  justify-content: center;
+ height: 820px;
+background-image: url(../img/imgem\ destaque.png);
+ background-size: cover;
+ background-repeat: no-repeat;
+  margin-top: -10px !important;
+  margin-bottom:-110px;
+
+}
+
+.titulo-premium{
+  margin-bottom: -110px;
+  margin-top: 130px;
+  height: 60px;
+  gap: 10px;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  background-color: #8200a6;
+}
+.titulo-premium p{
+  font-size: 27px;
+  margin-top: 16px;
+  color: white;
+}
+
+.titulo-premium img{
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.755);
+ 
+}
+.titulo-premium img:hover{
+  background-color: white;
+  border-radius: 8px;
+   box-shadow: 0 4px 12px rgba(255, 255, 255, 0.35);
+    transition: all 0.3s ease;
+
+}
+
+
+
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(20px);
+  }
+  50% {
+    transform: translateY(-70px);
+  }
+}
+
+
+
+.boximagemclientes{
+   display: flex;
+   justify-content: center;
+width: 100%;
+height: 400px;
+background-size: cover;
+   background-repeat: no-repeat;
+background-image: url(/walksdrone-main/src/img/div\ insta.png);
+}
+
+
+
+/*Estilização Container CLients*/
+
+.texto-clients {
+  margin-top: -10px;
+color: #ffffff;
+font-size: 20px;
+  
+}
+
+/*Estilização Clients Parceiro Videos1*/
+
+.contorno-fileira{
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-items: center;
+  background-color: #212020;
+  background-repeat: no-repeat;
+  background-size: cover;
+  gap: 10px;
+  
+}
+.contorno-fileira2{
+  background-color: #212020;
+  margin-top: 0px;
+  margin-bottom:1px;
+  padding: -10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-items: center;
+ 
+  background-repeat: no-repeat;
+  background-size: cover;
+  gap: 10px;
+  
+}
+
+
+  
+
+.container-fileira-video1  .container-fileira-video2, .container-fileira-video3{
+   display: flex;
+   justify-content: center;
+   margin-bottom: 20px;
+   margin-top: 20px;
+   
+}
+
+
+
+/*Estilização Makers Parceiro Videos1*/
+
+
+
+
+
+
+/*Estilização clients Parceiro Videos3*/
+.video3 a, .video2 a, .video1 a {
+color: #000000;
+
+
+}
+
+.video1 a{
+ 
+  margin-left: 100px;
+}
+
+.video2, .video1 {
+  padding: 10px;
+  height: 490px;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  margin-top: 7px;
+  width: 324px;
+  background-color: #ffffff;
+  font-size: 13px;
+  color: #000000;
+}
+
+.video3 {
+  padding: 10px;
+  height: 490px;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  margin-top: -12px;
+  width: 324px;
+  background-color: #ffffff;
+  font-size: 13px;
+  color: #000000;
+}
+
+
+
+
+
+
+.titulo-video3, .titulo-video2{
+  margin-top: -0px;
+  text-align: center;
+  background-color: #ffffff;
+
+}
+
+ .texto3, .texto2{
+  margin-top: 10px;
+  margin-top: 10px;
+  text-align: justify;
+  width: 300px;
+  font-size: 12px;
+  margin-left: 12px;
+}
+
+ .texto{
+  margin-top: 10px;
+  margin-top: 10px;
+  text-align: justify;
+  width: 270px;
+  font-size: 13px;
+  margin-left: 25px;
+}
+
+
+/*Estilização Container Rede Social Sobre/About*/
+.footer-walks{
+    background:#000;
+    color:#fff;
+    padding:60px 40px;
+    font-family:Arial,sans-serif;
+   
+}
+
+/* LINHA PRINCIPAL */
+
+
+
+
+.footer-logo img{
+    max-width:60px;
+}
+
+/* TEXTO CENTRAL */
+
+
+
+
+/* REDES */
+.footer-social{
+    flex:1;
+    display:flex;
+    justify-content:center;
+    gap:10px;
+}
+
+.social-icon{
+    width:70px;
+    height:70px;
+   
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#A6FF00;
+    font-size:40px;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.social-icon:hover{
+    background:#A6FF00;
+    color:#000;
+    box-shadow:0 0 20px #A6FF00;
+    transform:translateY(-5px);
+}
+
+/* RODAPÉ INFERIOR */
+.box-copy{
+ 
+display: flex;
+justify-content: center;
+
+
+
+}
+
+
+/*RESPONSIVE*/
+
+/* --- Media Query para telas com largura máxima de 415px --- */
+
+@media (max-width: 415px) { /* Este é o breakpoint, ajuste conforme necessário */
+   
+  .video-container{
+      margin-top: 190px !important;
+      margin-bottom: 0px;
+        padding:15px;
+    }
+
+    .video-box{
+        width:100%;
+        border-radius:10px;
+    }
+
+    .container-menu{
+    width:100%;
+    height: 90px;
+    display: flex;
+    margin-top: 20px !important;
+    margin-bottom: 0px;
+    padding: 0px !important;
+    background-color: rgba(0, 0, 0, 0.049);
+    }
+
+
+.container-home{
+  width: 100% !important;
+  background-image: url(/walksdrone-main/src/img/imgem\ destaque.png) !important;
+  background-size: contain;
+  justify-content: center;
+ background-repeat: no-repeat;
+  margin-top: -100px !important;
+  margin-bottom: -790px;
+}
+
+
+
+
+    .whatsapp-button {
+        bottom: 15px; /* Ajuste para não ficar tão próximo da borda */
+        right: 6px;
+        width: 50px; /* Reduzido para mobile */
+        height: 50px; /* Reduzido para mobile */
+        font-size: 25px; /* Tamanho do ícone ajustado */
+    }
+
+    .whatsapp-button img {
+        width: 80px; /* Tamanho da imagem ajustado */
+    }
+
+    .whatsapp-button:hover {
+        width: 52px; /* Pequeno ajuste no hover */
+        height: 52px;
+        background-color: #0caa09e0;
+    }
+
+
+
+     .retornar-button {
+        bottom: 15px; /* Ajuste para não ficar tão próximo da borda */
+        left: 7px;
+        width: 50px; /* Reduzido para mobile */
+        height: 50px; /* Reduzido para mobile */
+        font-size: 25px; /* Tamanho do ícone ajustado */
+    }
+
+    .retornar-button img {
+        width: 70px; /* Tamanho da imagem ajustado */
+    }
+
+    .rtornar-button:hover {
+        width: 52px; /* Pequeno ajuste no hover */
+        height: 52px;
+        background-color: #b404efe0;
+    }
+
+
+/*Estilização Menu */
+
+.logo{
+  margin-left: 0px;
+  width: 58px;
+  height: 58px;
+ 
+}
+
+nav {
+  width: 260px;
+  background: #f2f3f6e9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav a {
+
+  font-size: 12px;
+  padding: 0 10px;
+  color: #000000;
+  text-decoration: none;
+ 
+  
+  
+}
+
+
+nav span {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 260px;
+  height: 100%;
+ background-color: #00a606;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+nav a:nth-child(1):hover ~ span {
+  left: 39px;
+  width: 48px;
+}
+
+nav a:nth-child(2):hover ~ span {
+  left: 89px;
+  width: 60px;
+}
+
+nav a:nth-child(3):hover ~ span {
+  left: 153px;
+  width: 67px;
+}
+
+nav a:nth-child(4):hover ~ span {
+  left: 193px;
+  width: 60px;
+}
+
+/*Estilização Menu */
+
+
+
+.container-download{
+  margin-top: 0px !important;
+  height: 42px !important;
+  margin-bottom: 5PX !important;
+background-color: #8d24aaed;
+}
+
+    
+.btn-download{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    width: 80px;
+    height: 42px;
+    padding:15px 30px;
+    margin-top: -10px !important;
+    margin-bottom: -10px !important;
+    background:#691b9a;
+    color:#fff;
+    text-decoration:none;
+    font-size:10px;
+    font-weight:600;
+
+    border-radius:8px;
+    transition:.3s;
+    box-shadow:0 6px 15px rgba(106,27,154,.3);
+}
+.container-patrocinadores{
+        display: flex;
+        flex-wrap: wrap;          /* Quebra em duas linhas */
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        padding: 5px;
+
+
+
+ 
+  height: 80px !important;
+
+  display: flex !important;
+  justify-content: center !important;
+  flex-direction:row !important;
+}
+.container-barra{
+  margin-top: -200PX I !important;
+  background-color: #00000000 !important;
+  display: flex !important;
+  justify-content: center !important;
+  height: 185PX !important;
+}
+  
+
+
+  
+    /* Animação Float - Mantida, mas com valores ajustados */
+    @keyframes float {
+        0%, 100% {
+            transform: translateY(10px); /* Movimento menor */
+        }
+        50% {
+            transform: translateY(-30px); /* Movimento menor */
+        }
+      }
+
+    /* --- Container Fotos Aéreas (Imagens e Vídeos) --- */
+    .container-imagensevideos {
+        height: auto; /* Altura flexível */
+        padding: 15px 0; /* Adiciona padding vertical */
+        flex-direction: column; /* Se houver múltiplos elementos, empilha-os */
+    }
+
+    .slider {
+        width: 95%; /* Largura percentual */
+        max-width: 400px; /* Limite de largura */
+        height: 250px; /* Altura fixa ou ajustar para flexível se necessário */
+        margin: 0 auto; /* Centraliza */
+    }
+
+  
+
+    .slide img {
+        /* Certifique-se de que a imagem preenche o slide */
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* --- Container Clients (Projetos) --- */
+.titulo-projects{
+display: flex;
+justify-content: center;
+justify-items: center;
+padding: 20px;
+}
+
+.texto-clients{
+  text-align: center;
+  font-size: 12px;
+  margin-top: -10px;
+  margin-bottom: 0px;
+  
+}
+
+.card{
+    width: 75px !important;
+    height: 56px !important;
+}
+
+
+
+.cidade{
+    font-size: 5px !important ;
+}
+
+.temperatura{
+  margin-top: 45px !important ;
+    font-size: 5px !important;
+}
+
+
+/* MENU DO CLIMA FIXO - MOBILE */
+
+
+    #container{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;          /* 2 linhas */
+        justify-content: center;
+        align-items: center;
+        gap: 4px;
+
+        padding: 6px 4px;
+        background: rgba(0,0,0,.95);
+
+        z-index: 9999;
+    }
+
+    #container .card{
+        width: 82px;
+        height: 60px;
+        margin: 0;
+    }
+
+    /* Evita que o conteúdo fique escondido atrás do menu */
+    body{
+        padding-top: 135px;
+    }
+.titulo-premium{
+  height: 70px;
+  margin-top: 210px;
+  margin-bottom: -200px;
+}
+
+
+
+
+}
+
+
+    /* Espaço entre o menu clima e o conteúdo do site */
+   
+
+
+
+
+
+
+
+
