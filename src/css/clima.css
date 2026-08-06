@@ -1,0 +1,135 @@
+/* ==========================
+   BARRA DO CLIMA
+========================== */
+
+#container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 10px;
+    background: rgba(10, 10, 15, 0.583);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-sizing: border-box;
+    z-index: 9999;
+    color: #fff;
+    margin-bottom: 0px;
+}
+
+/* ==========================
+   CARD
+========================== */
+
+.card{
+    width: 90px;
+    min-height: 95px;
+    padding: 8px 6px;
+    background: linear-gradient(145deg,#1d1d1d,#111);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: .3s;
+    box-shadow: 0 4px 10px rgba(0,0,0,.35);
+}
+
+.card:hover{
+    transform: translateY(-3px) scale(1.04);
+}
+
+/* ==========================
+   TEXTO
+========================== */
+
+.city{
+    font-size:11px;
+    font-weight:600;
+    text-align:center;
+    margin-bottom:3px;
+}
+
+.icon{
+    font-size:10px;
+    margin:4px 0;
+}
+
+.temp{
+    font-size:17px;
+    font-weight:bold;
+}
+
+.feels-like{
+    font-size:10px;
+    opacity:.75;
+    margin-top:4px;
+    text-align:center;
+}
+
+/* ==========================
+   DESTAQUES
+========================== */
+
+.cold{
+    
+    box-shadow:0 0 15px rgba(0, 140, 255, 0.6);
+}
+
+.hot{
+    
+    box-shadow:0 0 15px rgba(237, 25, 25, 0.6);
+}
+
+/* ==========================
+   ERRO
+========================== */
+
+.erro-clima{
+    width:100%;
+    text-align:center;
+    color:#ffb3b3;
+    font-size:14px;
+    padding:15px;
+}
+
+/* ==========================
+   RESPONSIVO
+========================== */
+
+@media (max-width:415px){
+
+    #container{
+      
+        gap:5px;
+        padding:6px;
+        height: 100px;
+    }
+
+    .card{
+        width:70px;
+        min-height:78px;
+        border-radius:10px;
+    }
+
+    .city{
+        font-size:9px;
+    }
+
+    .icon{
+        font-size:18px;
+    }
+
+    .temp{
+        font-size:15px;
+    }
+
+    .feels-like{
+        display:none;
+    }
+
+}

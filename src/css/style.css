@@ -1,0 +1,707 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Wallpoet&display=swap');
+*{
+    margin:0;
+    padding:0;
+   
+    box-sizing:border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0b1d2a !important;
+}
+
+
+
+
+
+.container-download{
+  background-color:#6A1B9A;
+  margin-top: 0px!important;
+  margin-bottom:2px!important;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+    
+   
+}
+
+.btn-download{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+
+    padding:15px 30px;
+
+    background:#6A1B9A;
+    color:#fff;
+    text-decoration:none;
+    font-size:16px;
+    font-weight:600;
+
+    border-radius:8px;
+    transition:.3s;
+    box-shadow:0 6px 15px rgba(106,27,154,.3);
+}
+
+.btn-download:hover{
+    
+    transform:translateY(-3px);
+    box-shadow:0 10px 20px rgba(255, 255, 255, 0.4);
+}
+
+.btn-download:active{
+    transform:scale(.98);
+}
+
+
+
+/* Container principal */
+.video-container,.video-container2{
+  margin-top: 110px;
+  margin-bottom: -18px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+    padding:30px 20px;
+    box-sizing:border-box;
+    background-color: #0a0a0aa2;
+    
+}
+
+/* Caixa do vídeo */
+.video-box{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    width:100%;
+    max-width:1200px;
+
+    aspect-ratio:16/9;
+
+    background:#000;
+    border-radius:15px;
+    overflow:hidden;
+}
+
+/* Vídeo */
+.video-box video{
+
+    width:100%;
+    height:100%;
+    object-fit:contain; /* Mantém o vídeo inteiro sem cortar */
+    display:block;
+}
+
+
+
+
+
+/* Botão oculto no desktop */
+#btnClimaMobile{
+    display:none;
+}
+
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+ 
+  box-shadow: 0px 2px 5px rgb(234, 0, 255);
+  z-index: 1000; /* Garante que o botão fique acima de outros elementos */
+  font-size: 30px; /* Tamanho do ícone */
+  color: #fff; /* Cor do ícone */
+}
+
+.whatsapp-button img {
+  width: 80px;
+  margin-top: 6px;
+  height: 80px;
+}
+
+.whatsapp-button:hover {
+  width: 67px;
+  height: 69px;
+  background-color: #ea00ffe0;
+   box-shadow: 0px 2px 5px rgb(255, 255, 255);
+}
+
+.retornar-button {
+  position: fixed;
+  bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #ffffff; /* Cor do WhatsApp */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+  z-index: 1000; /* Garante que o botão fique acima de outros elementos */
+  font-size: 30px; /* Tamanho do ícone */
+  color: #fff; /* Cor do ícone */
+  margin-left: 20px;
+}
+
+.retornar-button img {
+  width: 71px;
+}
+
+
+
+
+.retornar-button:hover {
+  width: 61px;
+  height: 61px;
+  background-color: #e100ff6e;
+}
+
+.menu{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+}
+
+.menu-links{
+    pointer-events:auto;
+   
+    
+}
+.menu-links a{
+    font-size: 13px;
+    padding: 4px 6px;
+}
+.container-barra-basico{
+    width:100%;
+    height:70px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+     background-color:#000000;
+    overflow:hidden;
+}
+
+
+.container-barra{
+    width:100%;
+    height:90px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+     background-color:#6A1B9A;
+    overflow:hidden;
+}
+
+.container-patrocinadores{
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+    gap:18px;
+    width:100%;
+    height:90px;
+    padding:0 15px;
+
+    overflow-x:auto;
+    overflow-y:hidden;
+    white-space:nowrap;
+
+    scrollbar-width:none;
+}
+
+.container-patrocinadores-basico{
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+    gap:18px;
+    width:100%;
+    height:120px;
+    padding:0 15px;
+
+    overflow-x:auto;
+    overflow-y:hidden;
+    white-space:nowrap;
+
+    scrollbar-width:none;
+}
+
+.container-patrocinadores::-webkit-scrollbar{
+    display:none;
+}
+
+.container-patrocinadores-basico::-webkit-scrollbar{
+    display:none;
+}
+.container-patrocinadores a{
+    flex:0 0 auto;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+}
+
+.patrocinador{
+    width:60px;
+    height:60px;
+    object-fit:contain;
+    border-radius:10px;
+    transition:.3s;
+    cursor:pointer;
+}
+
+.patrocinador:hover{
+    transform:scale(1.12);
+    box-shadow:0 5px 15px rgba(255,255,255,.35);
+}
+
+.container-patrocinadores-basico a:hover{
+   background-color: #73ff005f;
+    box-shadow:0 5px 10px rgb(183, 0, 255);
+}
+
+
+
+
+
+
+
+
+/*Estilização Titulo */
+
+.box-home{
+ display: flex;
+ width: 100%;
+  justify-content: center;
+ height: 770px;
+ background-size: contain;
+ background-repeat: no-repeat;
+  margin-top: -10px !important;
+  margin-bottom:-110px;
+background-color: none;
+background-image: url("../img/destaque2.png");
+
+
+}
+
+
+.titulo-premium{
+  margin-bottom: -110px;
+  margin-top: 130px;
+  height: 60px;
+  gap: 10px;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  background-color: #8200a6;
+}
+.titulo-premium p{
+  font-size: 27px;
+  margin-top: 16px;
+  color: white;
+}
+
+.titulo-premium img{
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.755);
+ 
+}
+.titulo-premium img:hover{
+  background-color: white;
+  border-radius: 8px;
+   box-shadow: 0 4px 12px rgba(255, 255, 255, 0.35);
+    transition: all 0.3s ease;
+
+}
+
+.obrigado{
+display:flex;
+justify-content: center;
+margin-top: 1px;
+max-width: 100%;
+height: 130px;
+background-color: #000000;
+
+}
+.imagem-obrigado{
+  border-radius: 19px;
+  margin-top: 0px;
+  display: flex;
+  justify-content: center;
+  background-size: cover;
+  height: 120px;
+  width: 500px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(20px);
+  }
+  50% {
+    transform: translateY(-70px);
+  }
+}
+
+
+
+.boximagemclientes{
+   display: flex;
+   justify-content: center;
+width: 100%;
+height: 400px;
+background-size: cover;
+   background-repeat: no-repeat;
+background-image: url(/walksdrone-main/src/img/div\ insta.png);
+}
+
+
+
+/*Estilização Container CLients*/
+
+.texto-clients {
+  margin-top: -10px;
+color: #ffffff;
+font-size: 20px;
+  
+}
+
+/*Estilização Clients Parceiro Videos1*/
+
+
+
+
+  
+
+
+
+/*Estilização Makers Parceiro Videos1*/
+
+
+
+
+
+
+
+
+
+
+
+
+/*Estilização Container Rede Social Sobre/About*/
+.footer-walks{
+    background:#000;
+    color:#fff;
+    padding:60px 40px;
+    font-family:Arial,sans-serif;
+   
+}
+
+/* LINHA PRINCIPAL */
+
+
+
+
+.footer-logo img{
+    max-width:60px;
+}
+
+/* TEXTO CENTRAL */
+
+
+
+
+/* REDES */
+.footer-social{
+    flex:1;
+    display:flex;
+    justify-content:center;
+    gap:10px;
+}
+
+.social-icon{
+    width:70px;
+    height:70px;
+   
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#A6FF00;
+    font-size:40px;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.social-icon:hover{
+    background:#A6FF00;
+    color:#000;
+    box-shadow:0 0 20px #A6FF00;
+    transform:translateY(-5px);
+}
+
+/* RODAPÉ INFERIOR */
+.box-copy{
+ color: #691b9a;
+display: flex;
+justify-content: center;
+letter-spacing: -1px;
+text-align: center;
+font-size: 12px;
+
+
+
+
+}
+
+
+/*RESPONSIVE*/
+
+/* --- Media Query para telas com largura máxima de 415px --- */
+
+@media (max-width: 415px) { /* Este é o breakpoint, ajuste conforme necessário */
+   
+  .video-container{
+      margin-top: 190px !important;
+      margin-bottom: 0px;
+        padding:15px;
+    }
+
+    .video-box{
+        width:100%;
+        border-radius:10px;
+    }
+
+
+
+
+ .video-container2{
+      margin-top: 10px !important;
+      margin-bottom: 0px;
+        padding:15px;
+    }
+
+   
+
+
+
+
+
+
+  
+.box-home{
+ display: flex;
+ width: 100%;
+ justify-items: center;
+  justify-content: center;
+ height: 230px;
+ background-size: cover;
+ background-repeat: no-repeat;
+  margin-top: 20px !important;
+  margin-bottom:-200px;
+  background-color: none;
+background-image: url("../img/destaque2.png");
+}
+
+ 
+
+
+    .whatsapp-button {
+        bottom: 15px; /* Ajuste para não ficar tão próximo da borda */
+        right: 6px;
+        width: 50px; /* Reduzido para mobile */
+        height: 50px; /* Reduzido para mobile */
+        font-size: 25px; /* Tamanho do ícone ajustado */
+    }
+
+    .whatsapp-button img {
+        width: 80px; /* Tamanho da imagem ajustado */
+    }
+
+    .whatsapp-button:hover {
+        width: 52px; /* Pequeno ajuste no hover */
+        height: 52px;
+        background-color: #0caa09e0;
+    }
+
+
+
+     .retornar-button {
+        bottom: 9px; /* Ajuste para não ficar tão próximo da borda */
+        left: -20px;
+        width: 62px; /* Reduzido para mobile */
+        height: 62px; /* Reduzido para mobile */
+        font-size: 26px; /* Tamanho do ícone ajustado */
+    }
+
+    .retornar-button img {
+        width: 70px; /* Tamanho da imagem ajustado */
+    }
+
+    .retornar-button:hover {
+        width: 52px; /* Pequeno ajuste no hover */
+        height: 52px;
+        background-color: #b404efe0;
+    }
+
+
+/*Estilização Menu */
+
+.container-barra{
+    width:100%;
+    overflow:hidden;
+    position:relative;
+    box-sizing:border-box;
+    padding:12px 0;
+}
+
+.container-patrocinadores{
+    display:flex;
+    align-items:center;
+    gap:18px;
+
+    width:max-content;
+
+    padding-left:265px;   /* importante */
+    padding-right:25px;
+
+    animation:scrollPatrocinadores 25s linear infinite;
+}
+
+.container-patrocinadores a{
+    flex:0 0 auto;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.container-patrocinadores img{
+    display:block;
+    width:70px;
+    height:60px;
+    object-fit:contain;
+}
+
+
+.container-download{
+  margin-top: 20px !important;
+  height: 42px !important;
+ 
+background-color: #8d24aaed;
+}
+
+    
+.btn-download{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    width: 80px;
+    height: 42px;
+    padding:15px 30px;
+    margin-top: -10px !important;
+    margin-bottom: -10px !important;
+    background:#691b9a;
+    color:#fff;
+    text-decoration:none;
+    font-size:10px;
+    font-weight:600;
+
+    border-radius:8px;
+    transition:.3s;
+    box-shadow:0 6px 15px rgba(106,27,154,.3);
+}
+
+.titulo-projects{
+display: flex;
+justify-content: center;
+justify-items: center;
+padding: 20px;
+}
+
+.texto-clients{
+  text-align: center;
+  font-size: 12px;
+  margin-top: -10px;
+  margin-bottom: 0px;
+  
+}
+
+
+   
+.titulo-premium{
+  height: 70px;
+  margin-top: 210px;
+  margin-bottom: -200px;
+}
+
+
+
+
+
+.imagem-obrigado{
+  border-radius: 19px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  background-size: cover;
+  height: 100px;
+  width: 380px;
+}
+
+
+
+
+
+
+
+    /* Espaço entre o menu clima e o conteúdo do site */
+   
+
+
+
+
+
+
+
+}
