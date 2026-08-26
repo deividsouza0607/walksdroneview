@@ -285,14 +285,14 @@ body {
 
 .box-home{
  display: flex;
- width: 100%;
+justify-items: center;
   justify-content: center;
  height: 770px;
- background-size: cover;
+ background-size: coVER;
  background-repeat: no-repeat;
   margin-top: -10px !important;
   margin-bottom:-110px;
-background-color: none;
+
 background-image: url("../img/destaque2.png");
 
 
