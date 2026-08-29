@@ -482,14 +482,12 @@ font-size: 20px;
 
 /* RODAPÉ INFERIOR */
 .box-copy{
- color: #691b9a;
+ color: #fbf9fc;
 display: flex;
 justify-content: center;
 letter-spacing: -1px;
 text-align: center;
-font-size: 12px;
-
-
+font-size: 14px;
 
 
 }
