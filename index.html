@@ -294,6 +294,42 @@ z-index: 998;
   font-size: 27px;
   
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ===========================
    RESPONSIVO - CELULAR
 =========================== */
@@ -545,9 +581,17 @@ function toggleFeriados(){
 
 
 
-
-
 <div class="container-download">
+<a href="https://drive.google.com/drive/folders/1X56Fyog2h1LQAbVxh3i8NihsWAEpqQMA?usp=sharing" 
+   target="_blank" 
+   rel="noopener noreferrer" 
+   class="btn-download">
+   📂 App Atlas Viagens
+</a>
+
+
+
+
     <a href="./src/pdf/Proposta Comercial 2026.pdf" download class="btn-download">
         <i class="fa-solid fa-file-pdf"></i>
        Baixar Proposta
@@ -573,7 +617,7 @@ function toggleFeriados(){
 <div class="container-barra">
 <div class="container-patrocinadores">
     
- <a href="https://juhpaes.github.io/Juh-Top-Model/index.html#contact" target="_blank">
+ <a href="https://www.instagram.com/dejuhmodas/" target="_blank">
         <img src="./src//img/Logo DeJuh.png" width="70px" height="60px"  alt="DeJuhModas" class="patrocinador">
       </a>
 <a href="https://www.instagram.com/geisa_e_maikel/reels/" target="_blank">
@@ -656,218 +700,7 @@ function toggleFeriados(){
     <img class="imagem-obrigado" src="./src/img/Obrigado premium.png">
 
     </div>
-<div class="frase-container">
 
-  <div class="frase-card">
-
-    <div class="icone">
-      <img src="./src/img/logo coroa.png" alt="Coroa">
-    </div>
-
-    <h2>Sabedoria do dia!</h2>
-
-    <div class="frase-box">
-      <p id="frase">Clique para revelar sua mensagem ✨</p>
-    </div>
-
-    <button id="btn">✨ NOVA FRASE</button>
-
-  </div>
-
-</div>
-
-<style>
-body {
-  background: radial-gradient(circle at top, #0b0b15, #050507);
-  font-family: Arial, sans-serif;
-}
-
-/* CONTAINER */
-.frase-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 500px;
-}
-
-/* CARD */
-.frase-card {
-  width: 480px;
-  padding: 30px;
-  border-radius: 20px;
-  backdrop-filter: blur(20px);
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.1);
-  text-align: center;
-  color: #fff;
-  box-shadow: 0 0 60px rgba(140,0,255,0.2);
-  position: relative;
-}
-
-/* ICONE */
-.icone img {
-  width: 140px;
-  margin-bottom: 10px;
-  filter: drop-shadow(0 0 10px #a855f7);
-}
-
-/* TITULO */
-.frase-card h2 {
-  font-size: 28px;
-  margin-bottom: 20px;
-}
-
-.frase-card h2 span {
-  color: #a855f7;
-}
-
-/* FRASE */
-.frase-box {
-  background: rgba(255,255,255,0.05);
-  border-radius: 15px;
-  padding: 20px;
-  margin-bottom: 25px;
-  border: 1px solid rgba(168,85,247,0.2);
-}
-
-#frase {
-  font-size: 16px;
-  line-height: 1.6;
-  opacity: 0;
-  transform: translateY(10px);
-  transition: 0.4s;
-}
-
-#frase.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* BOTÃO */
-button {
-  padding: 12px 25px;
-  border-radius: 30px;
-  border: none;
-  background: linear-gradient(45deg, #9333ea, #6d28d9);
-  color: #fff;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.3s;
-  box-shadow: 0 0 20px rgba(168,85,247,0.4);
-}
-
-button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 30px rgba(168,85,247,0.7);
-}
-
-/* GLOW BORDA */
-.frase-card::after {
-  content: "";
-  position: absolute;
-  inset: -1px;
-  border-radius: 20px;
-  background: linear-gradient(120deg, transparent, rgba(168,85,247,0.4), transparent);
-  opacity: 0.5;
-  z-index: -1;
-}
-</style>
-
-<script>
-
- const frases = [
-  "Só sei que nada sei. — Sócrates",
-  "Conhece-te a ti mesmo. — Sócrates",
-  "Uma vida sem reflexão não vale a pena ser vivida. — Sócrates",
-  "Penso, logo existo. — René Descartes",
-  "A dúvida é o início da sabedoria. — René Descartes",
-  "O homem é livre no momento em que deseja ser. — Voltaire",
-  "Devemos cultivar nosso jardim. — Voltaire",
-  "A felicidade depende de nós mesmos. — Aristóteles",
-  "Somos o que repetidamente fazemos. — Aristóteles",
-  "A excelência não é um ato, mas um hábito. — Aristóteles",
-
-  "A paciência é amarga, mas seus frutos são doces. — Jean-Jacques Rousseau",
-  "O homem nasce livre, mas por toda parte encontra-se acorrentado. — Rousseau",
-  "A coragem é a primeira das qualidades humanas. — Winston Churchill",
-  "O sucesso não é final, o fracasso não é fatal. — Winston Churchill",
-  "A vida deve ser compreendida olhando para trás, mas vivida olhando para frente. — Kierkegaard",
-  "A angústia é a vertigem da liberdade. — Kierkegaard",
-  "Sem música, a vida seria um erro. — Friedrich Nietzsche",
-  "Torna-te quem tu és. — Nietzsche",
-  "Aquilo que não me mata me fortalece. — Nietzsche",
-  "Quem tem um porquê enfrenta qualquer como. — Nietzsche",
-
-  "O homem está condenado a ser livre. — Jean-Paul Sartre",
-  "A existência precede a essência. — Sartre",
-  "Liberdade é o que você faz com o que fizeram de você. — Sartre",
-  "No meio do caminho tinha uma pedra. — Carlos Drummond de Andrade",
-  "E agora, José? — Drummond",
-  "Ser feliz sem motivo é a mais autêntica forma de felicidade. — Drummond",
-  "Tudo vale a pena quando a alma não é pequena. — Fernando Pessoa",
-  "Tenho em mim todos os sonhos do mundo. — Fernando Pessoa",
-  "Para viajar basta existir. — Fernando Pessoa",
-  "O valor das coisas não está no tempo que duram. — Fernando Pessoa",
-
-  "O essencial é invisível aos olhos. — Antoine de Saint-Exupéry",
-  "Tu te tornas eternamente responsável por aquilo que cativas. — Saint-Exupéry",
-  "A simplicidade é o último grau de sofisticação. — Leonardo da Vinci",
-  "Aprender nunca cansa a mente. — Leonardo da Vinci",
-  "A vida é realmente simples, mas insistimos em torná-la complicada. — Confúcio",
-  "Escolhe um trabalho que amas e não trabalharás um único dia. — Confúcio",
-  "O homem superior é modesto em suas palavras. — Confúcio",
-  "A jornada de mil milhas começa com um único passo. — Lao Tsé",
-  "Quem conhece os outros é sábio; quem conhece a si mesmo é iluminado. — Lao Tsé",
-  "A natureza não tem pressa, mas tudo é realizado. — Lao Tsé",
-
-  "A felicidade é quando o que você pensa, diz e faz estão em harmonia. — Gandhi",
-  "Seja a mudança que você quer ver no mundo. — Gandhi",
-  "Olho por olho e o mundo acabará cego. — Gandhi",
-  "Não há caminho para a felicidade, a felicidade é o caminho. — Buda",
-  "A mente é tudo. Você se torna aquilo que pensa. — Buda",
-  "O apego é a raiz do sofrimento. — Buda",
-  "Viver é a coisa mais rara do mundo. — Oscar Wilde",
-  "Seja você mesmo; todos os outros já existem. — Oscar Wilde",
-  "Experiência é o nome que damos aos nossos erros. — Oscar Wilde",
-
-  "O conhecimento é poder. — Francis Bacon",
-  "Tempo é dinheiro. — Benjamin Franklin",
-  "Aquele que tem paciência pode ter o que quiser. — Franklin",
-  "A esperança é o sonho do homem acordado. — Aristóteles",
-  "A educação é a arma mais poderosa. — Nelson Mandela",
-  "Ninguém nasce odiando outra pessoa. — Mandela",
-  "Tudo o que somos é resultado do que pensamos. — Buda",
-  "A sabedoria começa na reflexão. — Sócrates",
-  "Grandes espíritos sempre encontraram oposição. — Einstein",
-  "A imaginação é mais importante que o conhecimento. — Einstein",
-
-  "Insanidade é fazer a mesma coisa esperando resultado diferente. — Einstein",
-  "A vida é como andar de bicicleta. — Einstein",
-  "O importante é não parar de questionar. — Einstein",
-  "Quem olha para fora sonha; quem olha para dentro desperta. — Carl Jung",
-  "Até que você torne o inconsciente consciente. — Carl Jung",
-  "Conhecer a si mesmo é o começo de toda sabedoria. — Aristóteles",
-
-  // completar até 300 automaticamente 👇
- 
-  
-
-];
-
-
-const btn = document.getElementById("btn");
-const frase = document.getElementById("frase");
-
-btn.addEventListener("click", () => {
-  frase.classList.remove("show");
-
-  setTimeout(() => {
-    const aleatoria = frases[Math.floor(Math.random() * frases.length)];
-    frase.innerText = aleatoria;
-    frase.classList.add("show");
-  }, 200);
-});
-</script>
 </div>
 
 <footer class="footer-walks">
