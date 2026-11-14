@@ -29,245 +29,69 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 
 
 
-<div id="wdv-robo-widget">
+<!-- BOTÃO FLUTUANTE WHATSAPP -->
+<a href="https://wa.me/5551995498299"
+   class="whatsapp-float"
+   target="_blank"
+   rel="noopener noreferrer"
+   aria-label="Fale conosco pelo WhatsApp">
+
+  <svg viewBox="0 0 32 32" aria-hidden="true">
+    <path fill="currentColor" d="M16 .5A15.4 15.4 0 0 0 2.7 23.7L.5 31.5l8-2.1A15.5 15.5 0 1 0 16 .5zm0 28.2c-2.3 0-4.5-.6-6.4-1.8l-.5-.3-4.7 1.2 1.2-4.6-.3-.5a12.7 12.7 0 1 1 10.7 6zm7-9.5c-.4-.2-2.1-1-2.4-1.1-.3-.1-.6-.2-.8.2-.2.4-.9 1.1-1.1 1.3-.2.2-.4.3-.8.1-.4-.2-1.5-.6-2.8-1.8-1-.9-1.8-2-2-2.4-.2-.4 0-.6.2-.8l.6-.7c.2-.2.2-.4.3-.6.1-.2 0-.5 0-.7-.1-.2-.8-2-1.1-2.7-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9s1.2 3.3 1.4 3.5c.2.2 2.4 3.7 5.9 5.1.8.3 1.4.5 1.9.6.8.3 1.6.2 2.2.1.7-.1 2.1-.9 2.4-1.7.3-.8.3-1.5.2-1.7-.1-.2-.3-.3-.7-.5z"/>
+  </svg>
+
+</a>
+
 <style>
-#wdv-robo-widget{font-family:system-ui,-apple-system,Segoe UI,sans-serif}
-#wdv-robo-widget *{box-sizing:border-box}
-#wdv-robo-widget .wdv-assistant{
-  position:fixed;right:24px;bottom:22px;z-index:999999;
-  width:100px;height:116px;padding:0;border:1px solid #b7ffb088;
-  border-radius:28px;cursor:pointer;overflow:visible;
-  background:radial-gradient(circle at 35% 20%,#1c6b12 0,#102b0b 48%,#071407 100%);
-  box-shadow:inset 0 1px 0 #ffffff55,0 0 25px #39ff1488,0 12px 24px #0008;
-  display:grid;place-items:center;animation:wdv-float 3.2s ease-in-out infinite;
-  -webkit-tap-highlight-color:transparent
+.whatsapp-float {
+  position: fixed;
+  width: 62px;
+  height: 62px;
+  right: 25px;
+  bottom: 25px;
+  background: #25D366;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 5px 18px rgba(0,0,0,.30);
+  z-index: 999999;
+  text-decoration: none;
+  transition: .3s ease;
+  animation: whatsappPulse 2s infinite;
 }
-#wdv-robo-widget .wdv-assistant svg{
-  position:absolute;left:50%;top:50%;width:88px;height:98px;
-  transform:translate(-50%,-50%);transition:opacity .38s ease,transform .55s cubic-bezier(.2,.85,.25,1);
-  filter:drop-shadow(0 5px 9px #02080299)
+
+.whatsapp-float svg {
+  width: 36px;
+  height: 36px;
 }
-#wdv-robo-widget .wdv-drone{opacity:1;transform:translate(-50%,-50%) scale(1) rotate(0)}
-#wdv-robo-widget .wdv-robot{opacity:0;transform:translate(-50%,-50%) scale(.35) rotate(-35deg)}
-#wdv-robo-widget .wdv-assistant.is-robot .wdv-drone{opacity:0;transform:translate(-50%,-50%) scale(.35) rotate(35deg)}
-#wdv-robo-widget .wdv-assistant.is-robot .wdv-robot{opacity:1;transform:translate(-50%,-50%) scale(1) rotate(0)}
-#wdv-robo-widget .wdv-orbit{position:absolute;inset:8px;border:1px solid #d9ffd233;border-radius:22px;pointer-events:none}
-#wdv-robo-widget .wdv-shadow{position:absolute;bottom:5px;width:48px;height:8px;border-radius:50%;background:#39ff1466;filter:blur(5px);animation:wdv-shadow 3.2s ease-in-out infinite;pointer-events:none}
-#wdv-robo-widget .wdv-hint{
-  position:fixed;right:24px;bottom:148px;z-index:999998;max-width:190px;
-  padding:10px 13px;border:1px solid #39ff1488;border-radius:14px 14px 4px 14px;
-  color:#f5eaff;background:linear-gradient(145deg,#173b12,#071407);
-  font:12px/1.4 system-ui,sans-serif;box-shadow:0 0 20px #39ff1433
+
+.whatsapp-float:hover {
+  transform: scale(1.12);
+  background: #128C7E;
 }
-#wdv-robo-widget .wdv-support-panel{
-  position:fixed;right:24px;bottom:154px;z-index:999998;
-  width:min(350px,calc(100vw - 28px));max-height:min(74vh,650px);overflow:auto;
-  border:1px solid #39ff1499;border-radius:20px;color:#efffeb;
-  background:linear-gradient(155deg,#12320f,#071407 78%);
-  box-shadow:0 18px 55px #000b,0 0 28px #39ff1444;font:13px/1.45 system-ui,sans-serif;
-  transform-origin:bottom right;animation:wdv-panel-in .22s ease-out
+
+@keyframes whatsappPulse {
+  0% { box-shadow: 0 0 0 0 rgba(37,211,102,.5); }
+  70% { box-shadow: 0 0 0 13px rgba(37,211,102,0); }
+  100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
 }
-#wdv-robo-widget .wdv-support-panel[hidden]{display:none}
-#wdv-robo-widget .wdv-panel-head{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:14px 15px;background:linear-gradient(110deg,#1b8510,#0d4309);border-bottom:1px solid #b6ff0033}
-#wdv-robo-widget .wdv-head-actions{display:flex;align-items:center;gap:7px}
-#wdv-robo-widget .wdv-theme-toggle{position:fixed;right:29px;bottom:111px;z-index:1000000;width:29px;height:29px;padding:0;border:1px solid #b6ff00aa;border-radius:50%;background:#071407;color:#d9ffd2;font:700 14px system-ui,sans-serif;cursor:pointer;display:grid;place-items:center;box-shadow:0 0 13px #39ff1488}
-#wdv-robo-widget .wdv-theme-toggle:hover{filter:brightness(1.2)}
-#wdv-robo-widget.wdv-purple-theme .wdv-support-panel{border-color:#c084fcaa;background:linear-gradient(155deg,#211334,#100a1c 78%);box-shadow:0 18px 55px #000b,0 0 28px #a855f744}
-#wdv-robo-widget.wdv-purple-theme .wdv-panel-head{background:linear-gradient(110deg,#6b21a8,#3b1760);border-bottom-color:#e9d5ff33}
-#wdv-robo-widget.wdv-purple-theme .wdv-close{border-color:#d8b4fe66;background:#1a0d2b;color:#f0abfc}
-#wdv-robo-widget.wdv-purple-theme .wdv-option{border-color:#a855f755;background:#180d28;color:#f5eaff}
-#wdv-robo-widget.wdv-purple-theme .wdv-option:hover,#wdv-robo-widget.wdv-purple-theme .wdv-option.selected{border-color:#e9d5ff;background:#2a1743;box-shadow:0 0 12px #a855f744}
-#wdv-robo-widget.wdv-purple-theme .wdv-contact-form input,#wdv-robo-widget.wdv-purple-theme .wdv-contact-form select,#wdv-robo-widget.wdv-purple-theme .wdv-contact-form textarea{border-color:#a855f766;background:#100a1c}
-#wdv-robo-widget.wdv-purple-theme .wdv-send{background:linear-gradient(110deg,#a855f7,#7e22ce);color:#fff}
-#wdv-robo-widget.wdv-purple-theme .wdv-destination{color:#d8b4fe}
-#wdv-robo-widget.wdv-purple-theme .wdv-status{background:#32134e;color:#f3e8ff}
-#wdv-robo-widget.wdv-purple-theme .wdv-theme-toggle{border-color:#d8b4feaa;background:#180d28;color:#f5eaff;box-shadow:0 0 13px #a855f788}
-#wdv-robo-widget.wdv-purple-theme .wdv-assistant{border-color:#d8b4fe88;background:radial-gradient(circle at 35% 20%,#63359a 0,#2b1745 48%,#130b20 100%);box-shadow:inset 0 1px 0 #ffffff55,0 0 25px #a855f766,0 12px 24px #0008}
-#wdv-robo-widget.wdv-purple-theme .wdv-orbit{border-color:#e9d5ff33}
-#wdv-robo-widget.wdv-purple-theme .wdv-assistant .wdv-robot{filter:hue-rotate(150deg) drop-shadow(0 5px 9px #02080299)}
-#wdv-robo-widget.wdv-purple-theme .wdv-hint{border-color:#a855f788;background:linear-gradient(145deg,#26143d,#120b20);color:#f5eaff}
-#wdv-robo-widget.wdv-purple-theme .wdv-assistant .wdv-drone{filter:hue-rotate(150deg) drop-shadow(0 5px 9px #02080299)}
-#wdv-robo-widget .wdv-panel-head strong{display:block;font-size:14px;color:#fff}
-#wdv-robo-widget .wdv-panel-head small{display:block;color:#d9ffd2;font-size:11px;margin-top:3px}
-#wdv-robo-widget .wdv-close{width:30px;height:30px;border:1px solid #b6ff0066;border-radius:9px;background:#071407;color:#b6ff00;font-size:21px;cursor:pointer}
-#wdv-robo-widget .wdv-panel-content{padding:14px}
-#wdv-robo-widget .wdv-panel-content p{margin:0 0 11px;color:#d9ffd2}
-#wdv-robo-widget .wdv-support-options{display:grid;gap:8px;margin-bottom:14px}
-#wdv-robo-widget .wdv-option{width:100%;text-align:left;padding:11px 12px;border:1px solid #39ff1455;border-radius:11px;background:#0a1e08;color:#efffeb;cursor:pointer;font:600 12px system-ui}
-#wdv-robo-widget .wdv-option:hover,#wdv-robo-widget .wdv-option.selected{border-color:#b6ff00;background:#14340e;box-shadow:0 0 12px #39ff1433}
-#wdv-robo-widget .wdv-contact-form{display:grid;gap:7px;border-top:1px solid #39ff1433;padding-top:12px}
-#wdv-robo-widget .wdv-contact-form label{font-size:11px;color:#d9ffd2;margin-top:3px}
-#wdv-robo-widget .wdv-contact-form input,#wdv-robo-widget .wdv-contact-form select,#wdv-robo-widget .wdv-contact-form textarea{width:100%;box-sizing:border-box;padding:10px;border:1px solid #39ff1455;border-radius:9px;background:#061005;color:#fff;font:12px system-ui;outline:none}
-#wdv-robo-widget .wdv-contact-form textarea{min-height:70px;resize:vertical}
-#wdv-robo-widget .wdv-send{border:0;border-radius:10px;padding:12px;background:linear-gradient(110deg,#39ff14,#16851a);color:#061005;font-weight:800;cursor:pointer;margin-top:5px}
-#wdv-robo-widget .wdv-destination{font-size:10px;color:#b6ff00;text-align:center}
-#wdv-robo-widget .wdv-status{display:none;padding:9px;border-radius:9px;background:#123b13;color:#d9ffd2;font-size:11px}
-#wdv-robo-widget .wdv-status.show{display:block}
-@keyframes wdv-float{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-15px) rotate(2deg)}}
-@keyframes wdv-shadow{0%,100%{transform:scale(1);opacity:.65}50%{transform:scale(.72);opacity:.3}}
-@keyframes wdv-panel-in{from{opacity:0;transform:translateY(10px) scale(.97)}to{opacity:1;transform:translateY(0) scale(1)}}
-@media(max-width:480px){
- #wdv-robo-widget .wdv-theme-toggle{right:17px;bottom:98px;width:27px;height:27px;font-size:13px}
- #wdv-robo-widget .wdv-assistant{right:12px;bottom:12px;transform:scale(.9);transform-origin:bottom right}
- #wdv-robo-widget .wdv-hint{right:12px;bottom:128px;max-width:155px;font-size:11px}
- #wdv-robo-widget .wdv-support-panel{right:12px;bottom:132px;width:min(340px,calc(100vw - 24px));max-height:70vh}
+
+@media(max-width:600px) {
+  .whatsapp-float {
+    width: 55px;
+    height: 55px;
+    right: 15px;
+    bottom: 18px;
+  }
+
+  .whatsapp-float svg {
+    width: 32px;
+    height: 32px;
+  }
 }
-@media(prefers-reduced-motion:reduce){#wdv-robo-widget .wdv-assistant,#wdv-robo-widget .wdv-shadow{animation:none}#wdv-robo-widget .wdv-assistant svg{transition:opacity .15s ease}}
 </style>
-
-<div class="wdv-hint" id="wdvHint">Olá! Toque no drone para ver minha transformação.</div>
-
-<button class="wdv-theme-toggle" id="wdvThemeToggle" type="button" aria-label="Trocar para tema roxo neon" title="Trocar tema">🟣 Roxo</button>
-
-<section class="wdv-support-panel" id="wdvSupportPanel" hidden aria-label="Opções de suporte">
-  <div class="wdv-panel-head">
-    <div><strong>Suporte Walks Drone View</strong><small>Olá! Como podemos ajudar?</small></div>
-    <div class="wdv-head-actions">
-      <button class="wdv-close" id="wdvSupportClose" type="button" aria-label="Fechar suporte">×</button>
-    </div>
-  </div>
-  <div class="wdv-panel-content">
-    <p>Escolha uma opção para iniciar seu atendimento:</p>
-    <div class="wdv-support-options">
-      <button class="wdv-option" type="button" data-topic="Dúvida sobre um serviço">💬 Dúvida sobre um serviço</button>
-      <button class="wdv-option" type="button" data-topic="Pedido em andamento">🛠️ Pedido em andamento</button>
-      <button class="wdv-option" type="button" data-topic="Alteração ou correção de conteúdo">✏️ Alteração ou correção</button>
-      <button class="wdv-option" type="button" data-topic="Outro assunto">✦ Outro assunto</button>
-    </div>
-    <form class="wdv-contact-form" id="wdvContactForm">
-      <label for="wdvName">Seu nome</label><input id="wdvName" name="name" required placeholder="Digite seu nome">
-      <label for="wdvPhone">WhatsApp</label><input id="wdvPhone" name="phone" required inputmode="tel" placeholder="Seu telefone">
-      <label for="wdvTopic">Assunto</label>
-      <select id="wdvTopic" name="topic" required>
-        <option value="">Selecione uma opção acima</option>
-        <option>Dúvida sobre um serviço</option><option>Pedido em andamento</option>
-        <option>Alteração ou correção de conteúdo</option><option>Outro assunto</option>
-      </select>
-      <label for="wdvDetails">Como podemos ajudar?</label>
-      <textarea id="wdvDetails" name="details" required placeholder="Descreva sua dúvida ou solicitação..."></textarea>
-      <button class="wdv-send" type="submit">Enviar chamado por e-mail ↗</button>
-      <div class="wdv-destination">Destino: walksdroneview@gmail.com</div>
-      <div class="wdv-status" id="wdvStatus" role="status"></div>
-    </form>
-  </div>
-</section>
-
-<button class="wdv-assistant" id="wdvAssistant" type="button" aria-label="Abrir opções de suporte" aria-pressed="false">
-  <span class="wdv-orbit"></span>
-  <svg class="wdv-drone" viewBox="0 0 120 112" aria-hidden="true">
-    <defs>
-      <linearGradient id="wdvDroneShell" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff"/><stop offset=".5" stop-color="#b7ffb0"/><stop offset="1" stop-color="#39ff14"/></linearGradient>
-      <filter id="wdvDroneGlow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-    </defs>
-    <g stroke="#39ff14" stroke-width="7" stroke-linecap="round" fill="none">
-      <path d="M48 48L25 28M72 48L95 28M45 62L24 82M75 62L96 82"/>
-    </g>
-    <g fill="#102b0b" stroke="#d9ffd2" stroke-width="2">
-      <ellipse cx="22" cy="24" rx="17" ry="5"/><ellipse cx="98" cy="24" rx="17" ry="5"/>
-      <ellipse cx="21" cy="86" rx="17" ry="5"/><ellipse cx="99" cy="86" rx="17" ry="5"/>
-    </g>
-    <g opacity=".7" filter="url(#wdvDroneGlow)" stroke="#d9ffd2" stroke-width="2" stroke-linecap="round">
-      <path d="M5 24h34M81 24h34M4 86h34M82 86h34"/>
-    </g>
-    <path d="M38 42Q60 30 82 42L88 64Q60 82 32 64Z" fill="url(#wdvDroneShell)" stroke="#c7ffbf" stroke-width="3"/>
-    <rect x="47" y="49" width="26" height="19" rx="8" fill="#102b0b" stroke="#39ff14" stroke-width="2"/>
-    <circle cx="60" cy="58" r="6" fill="#b6ff00" stroke="#fff" stroke-width="2" filter="url(#wdvDroneGlow)"/>
-    <path d="M53 72l-5 9M67 72l5 9" stroke="#39ff14" stroke-width="4" stroke-linecap="round"/>
-    <circle cx="60" cy="39" r="4" fill="#b6ff00" filter="url(#wdvDroneGlow)"/>
-  </svg>
-  <svg class="wdv-robot" viewBox="0 0 100 112" aria-hidden="true">
-    <defs>
-      <linearGradient id="wdvBotShell" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff"/><stop offset=".48" stop-color="#b7ffb0"/><stop offset="1" stop-color="#39ff14"/></linearGradient>
-      <linearGradient id="wdvBotBody" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#d9ffd2"/><stop offset="1" stop-color="#16851a"/></linearGradient>
-      <filter id="wdvBotGlow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></filter>
-    </defs>
-    <path d="M50 8V18" stroke="#d9ffd2" stroke-width="4" stroke-linecap="round"/>
-    <circle cx="50" cy="7" r="5" fill="#8cff66" filter="url(#wdvBotGlow)"/>
-    <rect x="12" y="23" width="76" height="57" rx="22" fill="url(#wdvBotShell)" stroke="#c7ffbf" stroke-width="3"/>
-    <path d="M8 48a42 42 0 0 1 84 0" fill="none" stroke="#39ff14" stroke-width="7" stroke-linecap="round"/>
-    <rect x="5" y="45" width="11" height="22" rx="5" fill="#39ff14"/><rect x="84" y="45" width="11" height="22" rx="5" fill="#39ff14"/>
-    <ellipse cx="34" cy="49" rx="6" ry="8" fill="#09200a"/><ellipse cx="66" cy="49" rx="6" ry="8" fill="#09200a"/>
-    <circle cx="36" cy="46" r="2" fill="#b6ff00"/><circle cx="68" cy="46" r="2" fill="#b6ff00"/>
-    <path d="M41 65q9 8 18 0" fill="none" stroke="#16851a" stroke-width="3.5" stroke-linecap="round"/>
-    <rect x="27" y="83" width="46" height="25" rx="10" fill="url(#wdvBotBody)" stroke="#39ff14" stroke-width="2"/>
-    <circle cx="50" cy="95" r="5" fill="#b6ff00" filter="url(#wdvBotGlow)"/>
-    <path d="M25 91l-8 8M75 91l8 8" stroke="#39ff14" stroke-width="5" stroke-linecap="round"/>
-  </svg>
-  <span class="wdv-shadow"></span>
-</button>
-
-<script>
-(() => {
-  const root = document.getElementById("wdv-robo-widget");
-  if (!root) return;
-  const button = root.querySelector("#wdvAssistant");
-  const hint = root.querySelector("#wdvHint");
-  const panel = root.querySelector("#wdvSupportPanel");
-  const close = root.querySelector("#wdvSupportClose");
-  const form = root.querySelector("#wdvContactForm");
-  const status = root.querySelector("#wdvStatus");
-  const topic = root.querySelector("#wdvTopic");
-  const themeToggle = root.querySelector("#wdvThemeToggle");
-
-  if (themeToggle) {
-    themeToggle.addEventListener("click", (event) => {
-      event.stopPropagation();
-      const purple = root.classList.toggle("wdv-purple-theme");
-      themeToggle.textContent = purple ? "🟢 Verde" : "🟣 Roxo";
-      themeToggle.setAttribute("aria-label", purple ? "Trocar para tema verde neon" : "Trocar para tema roxo neon");
-      themeToggle.title = purple ? "Trocar para verde neon" : "Trocar para roxo neon";
-    });
-  }
-
-  function setOpen(open) {
-    button.classList.toggle("is-robot", open);
-    button.setAttribute("aria-pressed", String(open));
-    button.setAttribute("aria-label", open ? "Fechar suporte e voltar ao drone" : "Abrir opções de suporte");
-    panel.hidden = !open;
-    if (hint) hint.textContent = open
-      ? "Sou seu assistente! Escolha uma opção de suporte."
-      : "Olá! Toque no drone para ver minha transformação.";
-  }
-
-  button.addEventListener("click", () => setOpen(!button.classList.contains("is-robot")));
-  close.addEventListener("click", () => setOpen(false));
-
-  root.querySelectorAll(".wdv-option").forEach(option => {
-    option.addEventListener("click", () => {
-      topic.value = option.dataset.topic;
-      root.querySelectorAll(".wdv-option").forEach(item => item.classList.remove("selected"));
-      option.classList.add("selected");
-      root.querySelector("#wdvDetails").focus();
-    });
-  });
-
-  form.addEventListener("submit", event => {
-    event.preventDefault();
-    if (!form.reportValidity()) return;
-    const data = new FormData(form);
-    const message = `CHAMADO DE SUPORTE — WALKS DRONE VIEW\n\nNome: ${data.get("name")}\nWhatsApp: ${data.get("phone")}\nAssunto: ${data.get("topic")}\n\nMensagem:\n${data.get("details")}`;
-    const subject = encodeURIComponent("Solicitação de suporte - Walks Drone View");
-    const body = encodeURIComponent(message);
-    status.textContent = "Abrindo seu aplicativo de e-mail com o chamado endereçado a walksdroneview@gmail.com. Confirme o envio por lá.";
-    status.classList.add("show");
-    window.location.href = `mailto:walksdroneview@gmail.com?subject=${subject}&body=${body}`;
-  });
-})();
-</script>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
